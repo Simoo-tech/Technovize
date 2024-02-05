@@ -112,7 +112,7 @@ const Landing = () => {
                 title={customer.name}
                 alt="customer-logo"
                 datatype={customer.name}
-                className=" w-[100px] max-w-[100px] h-[100px] "
+                className=" w-[90px] max-w-[90px]  "
               />
             ))}
           </Carousel>
