@@ -142,7 +142,7 @@ const Services = () => {
           {ServicesData.map((service) => (
             <div
               key={service.id}
-              className="sm:w-10/12 md:w-4/12 lg:w-3/12 lg:mb-7 xl:w-2/12 bg-white h-[330px] flex flex-col justify-between items-center duration-[.4s]
+              className="sm:w-9/12 md:w-4/12 lg:w-3/12 lg:mb-7 xl:w-2/12 bg-white h-[330px] flex flex-col justify-between items-center duration-[.4s]
               relative group rounded-3xl rounded-ee-none hover:justify-end hover:translate-y-[20px]"
             >
               <span className="serviceShape bg-color4 absolute top-0 left-0 w-full h-[35%] duration-[.4s] group-hover:bg-transparent rounded-t-3xl" />
