@@ -10,6 +10,11 @@ module.exports = {
         color3: "#9a4e3d",
         color4: "#2f2d31",
       },
+      backgroundImage:{
+        'About': 'url(../assets/Image-10.png)'
+      },
+
+      
       keyframes: {
         rightLeft: {
           "0%, 100%": { transform: "translateX(0%)" },

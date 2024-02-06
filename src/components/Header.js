@@ -3,6 +3,7 @@ import logo from "../assets/main logo.webp";
 import { Link } from "react-router-dom";
 // icons
 import { RiMenuFill, RiMenu2Fill } from "react-icons/ri";
+import About from "../pages/About";
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
@@ -66,7 +67,7 @@ const Header = () => {
               before:absolute hover:before:w-full before:h-[2px] sm:before:bg-white lg:before:bg-color3
               before:right-0 before:-bottom-2 before:w-0 "
             >
-              <Link to={""} className="sm:text-base md:text-lg  font-medium">
+              <Link to='/about' className="sm:text-base md:text-lg  font-medium">
                 من نحن
               </Link>
             </li>
