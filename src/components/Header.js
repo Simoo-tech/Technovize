@@ -54,12 +54,9 @@ const Header = () => {
               before:absolute hover:before:w-full before:h-[2px] sm:before:bg-white lg:before:bg-color3
               before:right-0 before:-bottom-2 before:w-0 "
             >
-              <a
-                href="#landing"
-                className="sm:text-base md:text-lg font-medium"
-              >
+              <Link to={"/"} className="sm:text-base md:text-lg font-medium">
                 الرئيسية
-              </a>
+              </Link>
             </li>
             <li
               role="menuitem"
@@ -67,7 +64,7 @@ const Header = () => {
               before:absolute hover:before:w-full before:h-[2px] sm:before:bg-white lg:before:bg-color3
               before:right-0 before:-bottom-2 before:w-0 "
             >
-              <Link to='/about' className="sm:text-base md:text-lg  font-medium">
+              <Link to={""} className="sm:text-base md:text-lg  font-medium">
                 من نحن
               </Link>
             </li>
@@ -99,7 +96,7 @@ const Header = () => {
           sm:text-color3 sm:bg-primary
           lg:text-white lg:bg-color3"
             >
-              اطلب مشروعك
+              اطلب خدمتك
             </button>
           </ul>
         </menu>

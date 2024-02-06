@@ -76,7 +76,7 @@ export const Footer = () => {
         xl:order-3 xl:w-2/12 
         "
         >
-          <h5 className="sm:text-xl md:text-2xl font-semibold text-left">
+          <h5 className="sm:text-xl md:text-2xl font-semibold text-right w-full">
             تواصل معنا
           </h5>
           <a

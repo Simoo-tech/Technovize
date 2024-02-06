@@ -5,7 +5,6 @@ import { Home } from "./pages/Home";
 import { IoIosArrowUp } from "react-icons/io";
 import { useEffect, useState } from "react";
 import { Footer } from "./components/Footer";
-import About from "./pages/About";
 
 function App() {
   useEffect(() => {
@@ -19,7 +18,6 @@ function App() {
         <Routes>
           <Route path={"/"} element={<Home />} />
           <Route path={"*"} element={<Home />} />
-          <Route path={"about"} element={<About />} />
         </Routes>
         <Footer />
         <ToTop />
