@@ -10,15 +10,11 @@ import "react-multi-carousel/lib/styles.css";
 import { CustomerData, PortfolioData, ServicesData } from "../data";
 // icon
 import { IoIosArrowBack } from "react-icons/io";
-import { FaRegLightbulb } from "react-icons/fa";
-import { FaCoins } from "react-icons/fa6";
-import { BiSupport } from "react-icons/bi";
-import { GiRibbonMedal } from "react-icons/gi";
-import { BiShieldAlt2 } from "react-icons/bi";
+import { Cards } from "../components/Cards";
 
 export const Home = () => {
   return (
-    <main id="home-page" className="flex flex-col gap-20">
+    <main id="home-page" className="flex flex-col gap-28">
       <Landing />
       <Services />
       <AboutUs />
@@ -27,7 +23,7 @@ export const Home = () => {
   );
 };
 
-//////////////* landing */////////////
+/////////// landing ///////////
 const Landing = () => {
   //// carsoul settings /////
 
@@ -122,11 +118,11 @@ const Landing = () => {
   );
 };
 
-//////////////* services */////////////
+/////////// services ///////////
 const Services = () => {
   return (
     <section id="services-section" className="relative w-full flex">
-      <h1 className="sm:text-7xl md:text-8xl lg:text-9xl font-extrabold text-white opacity-50 absolute right-3 sm:-top-8 md:-top-11 lg:-top-14 z-0">
+      <h1 className="sm:text-7xl md:text-8xl lg:text-9xl font-extrabold text-white opacity-60 absolute right-8 sm:-top-8 md:-top-11 lg:-top-16 z-0">
         خدماتنا
       </h1>
       <div className="container relative z-10">
@@ -138,54 +134,48 @@ const Services = () => {
             و اطلب خدمتك الان
           </dd>
         </dl>
-        <div className="services flex items-center sm:gap-10 lg:gap-4 sm:justify-evenly xl:justify-between flex-wrap mt-8">
+        <div className="services flex items-center sm:gap-10 lg:gap-20 justify-center flex-wrap mt-12">
           {ServicesData.map((service) => (
             <div
               key={service.id}
-              className="sm:w-9/12 md:w-4/12 lg:w-3/12 lg:mb-7 xl:w-2/12 bg-white h-[330px] flex flex-col justify-between items-center duration-[.4s]
-              relative group rounded-3xl rounded-ee-none hover:justify-end hover:translate-y-[20px]"
+              style={{ backgroundImage: `url(${service.bgImg})` }}
+              className="min-h-[300px] flex duration-[.4s] relative group rounded-3xl rounded-ee-none hover:-translate-y-[15px] bg-cover
+               bg-center shadow-lg drop-shadow-md shadow-zinc-600
+              sm:w-11/12 
+              md:w-5/12 
+              lg:w-4/12   
+              xl:w-3/12          
+              before:z-0 before:rounded-3xl before:rounded-ee-none before:absolute before:bg-black before:w-full 
+              before:h-full before:top-0 before:left-0 before:opacity-80"
             >
-              <span className="serviceShape bg-color4 absolute top-0 left-0 w-full h-[35%] duration-[.4s] group-hover:bg-transparent rounded-t-3xl" />
-              <span className="serviceShape bg-black rotate-180 absolute top-0 left-0 w-full h-[35%] group-hover:bg-transparent duration-[.4s] rounded-b-3xl" />
-              {/* card image */}
+              {/* card text */}
               <div
-                className={`
-            img-holder h-[120px] sm:w-full lg:w-10/12 rounded-t-2xl duration-[.4s] ease-in-out relative   
-            group-hover:absolute group-hover:w-fit group-hover:justify-center 
-            group-hover:-top-8 group-hover:flex`}
+                className="text relative flex min-h-[300px] flex-col z-10 text-white w-full justify-center items-center gap-4
+                  group-hover:justify-between group-hover:gap-4 duration-[.4s] p-4 pb-0"
               >
                 <img
                   src={service.img}
-                  className="max-w-[200px] absolute top-5 left-[50%] translate-x-[-50%] duration-[.4s] ease-in-out
-              group-hover:max-w-[100px] group-hover:top-2  "
                   alt="service-img"
+                  className="w-[130px] group-hover:hidden duration-[.4s]"
                 />
-              </div>
-              {/* card text */}
-              <div
-                className="text h-2/4 flex flex-col justify-evenly items-center
-          group-hover:h-[88%] group-hover:justify-start group-hover:gap-2 duration-[.4s] py-2 px-4 ease-in-out"
-              >
-                <h4 className="text-lg font-semibold text-center w-full capitalize">
-                  {service.name}
-                </h4>
-                <p
-                  className="hidden group-hover:block w-full leading-snug text-base h-[215px]
-            truncate text-pretty "
+                <div className="title-info flex flex-col gap-4">
+                  <h4 className="text-xl font-semibold text-center w-full capitalize">
+                    {service.name}
+                  </h4>
+                  <p className="hidden group-hover:block w-full leading-relaxed text-[16px] duration-[.4s] truncate text-balance ">
+                    {service.Cardinfo}
+                  </p>
+                </div>
+                <a
+                  href={`خدامتنا/${service.path}`}
+                  className="hidden group-hover:flex flex-row items-center gap-2 border-t-2 duration-[.4s] w-full justify-center py-3"
                 >
-                  {service.info}
-                </p>
-                <Link
-                  to={""}
-                  className="hidden group-hover:flex flex-row items-center gap-2 border-t-2 
-              w-full justify-center pt-2"
-                >
-                  اقرأ المزيد{" "}
+                  اقرأ المزيد
                   <IoIosArrowBack
                     size={15}
                     className="group-hover:animate-rightLeft"
                   />
-                </Link>
+                </a>
               </div>
             </div>
           ))}
@@ -195,11 +185,11 @@ const Services = () => {
   );
 };
 
-//////////////* about us */////////////
+/////////// about us ///////////
 const AboutUs = () => {
   return (
     <section id="about-us-section" className="relative w-full flex  flex-col">
-      <h1 className=" sm:text-7xl md:text-8xl lg:text-9xl font-extrabold text-white opacity-50 absolute right-3 sm:-top-8 md:-top-11 lg:-top-14 z-0">
+      <h1 className="sm:text-7xl md:text-8xl lg:text-9xl font-extrabold text-white opacity-60 absolute right-8 sm:-top-8 md:-top-11 lg:-top-16 z-0">
         من نحن
       </h1>
       <div className="container flex flex-col justify-between h-full gap-5 relative z-10">
@@ -225,12 +215,12 @@ const AboutUs = () => {
               </ul>
             </h3>
             <h4 className="sm:text-base md:text-lg xl:text-xl font-medium text-pretty">
-              نستخدام احدث التقنيات و الاستراتيجيات, هناك ايضا خبراء سيقدمون
-              افضل الحلول للمشكلات التي ستواجك خلال بدا مشروعك و سيقدمون
-              اقتراحات تجعل مشروعك افضل و اوضح,
+              نستخدم احدث التقنيات و الاستراتيجيات, هناك ايضا خبراء سيقدمون افضل
+              الحلول للمشكلات التي ستواجك خلال بدء مشروعك و سيقدمون اقتراحات
+              تجعل مشروعك افضل و اوضح.
             </h4>
             <Link
-              to={""}
+              to={"/من-نحن"}
               className="flex w-fit py-2 sm:text-base md:text-lg px-6 items-center gap-2 bg-color4 text-white group
           duration-300 rounded-l-2xl hover:bg-color3 hover:rounded-md hover:-translate-x-2"
             >
@@ -246,102 +236,12 @@ const AboutUs = () => {
         </div>
       </div>
       {/* why us */}
-      <section id="why-us" className="h-fit my-10 w-full relative">
-        <span
-          className="z-0 absolute top-[50%] bg-color3  translate-y-[-50%]
-        sm:w-2 sm:h-5/6 sm:left-[50%] translate-x-[-50%]
-        lg:w-11/12 lg:left-10 lg:h-2 lg:translate-x-0
-        xl:left-16"
-        />
-        <div
-          className="container flex items-center z-10 relative sm:gap-2 flex-wrap
-        sm:flex-col sm:justify-center 
-        md:justify-between
-        lg:flex-row
-        "
-        >
-          <div
-            className="box flex flex-col bg-color4 rounded-lg shadow-xl drop-shadow-xl justify-evenly items-center
-            sm:w-9/12 sm:h-fit sm:text-xl sm:py-3 sm:gap-2
-            md:py-3 md:px-4 
-            lg:w-[190px] lg:h-[120px] 
-            xl:w-[220px] xl:h-[140px] "
-          >
-            <FaRegLightbulb
-              color="white"
-              className="sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl"
-            />
-            <p className="sm:text-lg sm:text-center md:text-xl text-white font-semibold">
-              لدينا حلول مبتكرة
-            </p>
-          </div>
-          <div
-            className="box flex flex-col bg-color4 rounded-lg shadow-xl drop-shadow-xl justify-evenly items-center
-            sm:w-9/12 sm:h-fit sm:text-xl sm:py-3 sm:gap-2
-            md:py-3 md:px-4 
-            lg:w-[190px] lg:h-[120px] 
-            xl:w-[220px] xl:h-[140px]  "
-          >
-            <BiShieldAlt2
-              color="white"
-              className="sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl"
-            />
-            <p className="sm:text-lg sm:text-center md:text-xl text-white font-semibold">
-              حماية قوية
-            </p>
-          </div>
-          <div
-            className="box flex flex-col bg-color4 rounded-lg shadow-xl drop-shadow-xl justify-evenly items-center
-            sm:w-9/12 sm:h-fit sm:text-xl sm:py-3 sm:gap-2
-            md:py-3 md:px-4 
-            lg:w-[190px] lg:h-[120px] 
-            xl:w-[220px] xl:h-[140px] "
-          >
-            <BiSupport
-              color="white"
-              className="sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl"
-            />
-            <p className="sm:text-lg sm:text-center md:text-xl text-white font-semibold">
-              دعم فني 24/7
-            </p>
-          </div>
-          <div
-            className="box flex flex-col bg-color4 rounded-lg shadow-xl drop-shadow-xl justify-evenly items-center
-            sm:w-9/12 sm:h-fit sm:text-xl sm:py-3 sm:gap-2
-            md:py-3 md:px-4 
-            lg:w-[190px] lg:h-[120px] 
-            xl:w-[220px] xl:h-[140px] "
-          >
-            <FaCoins
-              color="white"
-              className="sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl"
-            />
-            <p className="sm:text-lg sm:text-center md:text-xl text-white font-semibold">
-              افضل الاسعار
-            </p>
-          </div>
-          <div
-            className="box flex flex-col bg-color4 rounded-lg shadow-xl drop-shadow-xl justify-evenly items-center
-            sm:w-9/12 sm:h-fit sm:text-xl sm:py-3 sm:gap-2
-            md:py-3 md:px-4 
-            lg:w-[190px] lg:h-[120px] 
-            xl:w-[220px] xl:h-[140px] "
-          >
-            <GiRibbonMedal
-              color="white"
-              className="sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl"
-            />
-            <p className="sm:text-lg sm:text-center md:text-xl text-white font-semibold">
-              جودة عالية
-            </p>
-          </div>
-        </div>
-      </section>
+      <Cards />
     </section>
   );
 };
 
-//  portfolio
+/////////// portfolio ///////////
 const Portfolio = () => {
   const responsive = {
     desktop: {
@@ -381,8 +281,8 @@ const Portfolio = () => {
           className="w-full"
         >
           {PortfolioData.map((por) => (
-            <Link
-              to={""}
+            <a
+              href={`/اعمالنا/${por.path}`}
               key={por.id}
               style={{ backgroundColor: por.bgColor }}
               className={`relative flex w-[330px] h-fit flex-col gap-3 items-center p-5 text-white rounded-2xl
@@ -395,7 +295,7 @@ const Portfolio = () => {
                 <p className="text-lg opacity-85">{por.type}</p>
                 <p className="text-2xl font-semibold">{por.cusname}</p>
               </div>
-            </Link>
+            </a>
           ))}
         </Carousel>
       </div>

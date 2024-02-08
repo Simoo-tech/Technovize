@@ -31,8 +31,8 @@ module.exports = {
       padding: {
         sm: "1rem",
         lg: "2rem",
-        xl: "3rem",
-        "2xl": "3rem",
+        xl: "2rem",
+        "2xl": "2rem",
       },
     },
   },
