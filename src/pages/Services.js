@@ -17,6 +17,37 @@ export const Service = () => {
   const { path } = useParams();
   const service = ServicesData.find((ser) => path === ser.path);
 
+  // services benefit
+  const serBenefit = service.serBenefit.list.map((li, i) => (
+    <li
+      key={i}
+      className={`${
+        service.serBenefit.list.length > 6 ? "text-[17.5px]" : "text-[17.9px] "
+      } text-pretty mr-5 mb-2 leading-relaxed`}
+    >
+      {li}
+    </li>
+  ));
+
+  // strategy steps
+  const serStrategy = service.strategy.steps.map((ser, i) => (
+    <div
+      no={`${i + 1}`}
+      key={i}
+      className={`card w-4/12 mt-8 m-2 bg-color4 flex flex-col gap-2 p-4 h-fit relative rounded-lg hover:scale-105 duration-200 ease-in-out
+    before:border-2 before:border-primary before:absolute before:content-[attr(no)] before:text-xl hover:before:text-white hover:before:bg-color3
+   before:text-color3 before:-top-[60px] before:left-[50%] before:translate-x-[-50%] before:bg-color4 before:p-4
+   before:rounded-full before:w-[50px] before:h-[50px] before:flex before:justify-center before:items-center `}
+    >
+      <RiArrowUpSFill
+        className="absolute -top-4 left-[50%] translate-x-[-50%] text-color4 "
+        size={30}
+      />
+      <h5 className="text-lg font-medium">{ser.name}</h5>
+      <p className="leading-relaxed ">{ser.val}</p>
+    </div>
+  ));
+
   return (
     <main key={service.id} id={service.name}>
       {/* top service img  */}
@@ -38,18 +69,7 @@ export const Service = () => {
               <h2 className="text-xl font-semibold mb-2">
                 {service.serBenefit.submain}
               </h2>
-              {service.serBenefit.list.map((li, i) => (
-                <li
-                  key={i}
-                  className={`${
-                    service.serBenefit.list.length > 6
-                      ? "text-[17.5px]"
-                      : "text-[17.9px] "
-                  } text-pretty mr-5 mb-2 leading-relaxed`}
-                >
-                  {li}
-                </li>
-              ))}
+              {serBenefit}
             </ul>
             <Link
               className="text-lg bg-color3 py-2 px-6 rounded-xl w-fit font-semibold flex items-center gap-1 border-2 border-color3
@@ -71,7 +91,7 @@ export const Service = () => {
         <img
           src={service.subimg}
           alt=""
-          className="w-[550px] rounded-xl shadow-lg"
+          className="w-[550px] h-[400px] rounded-xl shadow-lg"
         />
         <div className="text w-7/12 flex flex-col justify-center">
           <h3 className="text-3xl font-semibold mb-6 flex flex-col gap-1">
@@ -97,23 +117,7 @@ export const Service = () => {
         <div className="steps w-full flex items-center justify-between flex-col">
           <span className="w-11/12 bg-color4 h-2 block rounded-xl  " />
           <div className="step relative z-10 flex justify-between text-white w-full">
-            {service.strategy.steps.map((ser, i) => (
-              <div
-                no={`${i + 1}`}
-                key={i}
-                className={`card w-4/12 mt-8 m-2 bg-color4 flex flex-col gap-2 p-4 h-fit relative rounded-lg hover:scale-105 duration-200 ease-in-out
-                before:border-2 before:border-primary before:absolute before:content-[attr(no)] before:text-xl hover:before:text-white hover:before:bg-color3
-               before:text-color3 before:-top-[60px] before:left-[50%] before:translate-x-[-50%] before:bg-color4 before:p-4
-               before:rounded-full before:w-[50px] before:h-[50px] before:flex before:justify-center before:items-center `}
-              >
-                <RiArrowUpSFill
-                  className="absolute -top-4 left-[50%] translate-x-[-50%] text-color4 "
-                  size={30}
-                />
-                <h5 className="text-lg font-medium">{ser.name}</h5>
-                <p className="leading-relaxed ">{ser.val}</p>
-              </div>
-            ))}
+            {serStrategy}
           </div>
         </div>
       </div>
