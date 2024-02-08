@@ -61,7 +61,10 @@ const Header = () => {
               before:absolute hover:before:w-full before:h-[2px] sm:before:bg-white lg:before:bg-color3
               before:right-0 before:-bottom-2 before:w-0 "
             >
-              <a href="/من-نحن" className="sm:text-base md:text-lg font-medium">
+              <a
+                href="/about-us"
+                className="sm:text-base md:text-lg font-medium"
+              >
                 من نحن
               </a>
             </li>
