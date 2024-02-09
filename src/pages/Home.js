@@ -167,7 +167,7 @@ const Services = () => {
                   </p>
                 </div>
                 <a
-                  href={`خدامتنا/${service.path}`}
+                  href={`/خدامتنا/${service.path}`}
                   className="hidden group-hover:flex flex-row items-center gap-2 border-t-2 duration-[.4s] w-full justify-center py-3"
                 >
                   اقرأ المزيد

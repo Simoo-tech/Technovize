@@ -18,7 +18,11 @@ export const Footer = () => {
       <div className="top container my-8 flex items-center gap-7 w-full sm:justify-center lg:justify-between flex-wrap  ">
         {/* logo and social media */}
         <div className="logo flex flex-col items-center gap-6 w-fit lg:order-2">
-          <img src={logo} alt="logo" className="sm:w-[180px] md:w-[200px]" />
+          <img
+            src={logo}
+            alt="logo"
+            className="sm:w-[180px] md:w-[200px] h-[100px]"
+          />
           {/* social media */}
           <div className="social-media flex items-center justify-center gap-7 w-full text-color3">
             <Link>
