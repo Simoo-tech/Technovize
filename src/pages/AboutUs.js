@@ -3,6 +3,8 @@ import { IoIosArrowBack } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { Cards } from "../components/Cards";
 import imgeStrategic from "../assets/est.jpg";
+import imgGoals from "../assets/goals.jpg";
+import imgAbout from "../assets/AboutUs.jpg";
 import ContactEmergencyIcon from "@mui/icons-material/ContactEmergency";
 import AutoGraphIcon from "@mui/icons-material/AutoGraph";
 import AdsClickSharpIcon from "@mui/icons-material/AdsClickSharp";
@@ -28,7 +30,7 @@ function About() {
       </div>
       {/* .......about company end.... */}
       <div className="container bottom-28  relative  ">
-        <div className=" bg-[#252427e3] flex flex-col justify-center items-center rounded-xl py-12 px-10 container gap-14">
+        <div className=" bg-[#252427e3] flex flex-col justify-center items-center rounded-xl py-12 px-14 container gap-14">
           {/* .......about... */}
           <div
             className="flex  justify-between  items-center   text-white
@@ -80,8 +82,8 @@ function About() {
               </Link>
             </div>
             <img
-              className="w-4/12   rounded-xl  max-md:hidden"
-              src={imgeStrategic}
+              className="w-5/12   rounded-xl  max-md:hidden"
+              src={imgAbout}
               alt="imgeStrategic"
             />
           </div>
@@ -93,7 +95,7 @@ function About() {
           >
             <img
               className="w-4/12 max-md:hidden  rounded-xl"
-              src={imgeStrategic}
+              src={imgGoals}
               alt=""
             />
 
