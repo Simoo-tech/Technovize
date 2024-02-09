@@ -19,8 +19,7 @@ function App() {
       <div className="App relative">
         <Header />
         <Routes>
-          <Route path={"/"} element={<Home />} />
-          <Route path={"*"} element={<Home />} />
+          <Route path={"/" || "*"} element={<Home />} />
           <Route path={"about"} element={<AboutUs />} />
           <Route path={"خدامتنا"} element={<Services />}>
             <Route path={":path"} element={<Service />} />
