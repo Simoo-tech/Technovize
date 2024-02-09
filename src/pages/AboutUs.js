@@ -46,7 +46,6 @@ function About() {
             sm:text-3xl  sm:items-center  
             "
               >
-                
                 من نحن
                 <ContactEmergencyIcon
                   fontSize="large"
