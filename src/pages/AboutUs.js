@@ -2,12 +2,13 @@ import React from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { Cards } from "../components/Cards";
+import { FaPeopleRoof } from "react-icons/fa6";
+import { GoGoal } from "react-icons/go";
+import { FaChartLine } from "react-icons/fa";
 import imgeStrategic from "../assets/est.jpg";
 import imgGoals from "../assets/goals.jpg";
 import imgAbout from "../assets/about.jpg";
-import ContactEmergencyIcon from "@mui/icons-material/ContactEmergency";
-import AutoGraphIcon from "@mui/icons-material/AutoGraph";
-import AdsClickSharpIcon from "@mui/icons-material/AdsClickSharp";
+
 function About() {
   return (
     <>
@@ -49,11 +50,10 @@ function About() {
             "
               >
                 من نحن
-                <ContactEmergencyIcon
-                  fontSize="large"
-                  className="text-color3 "
-                />
+              <FaPeopleRoof  className='text-color3'/>
               </h3>
+
+
               <p
                 className="text-lg 
                 sm:text-base sm:mr-4 sm:items-start  
@@ -111,8 +111,7 @@ function About() {
                max-lg:text-right 
             "
               >
-                هدفنا{" "}
-                <AdsClickSharpIcon fontSize="large" className="text-color3" />
+                هدفنا<GoGoal className='text-color3'/>
               </h3>
 
               <p
@@ -149,10 +148,9 @@ function About() {
              lg:text-start 
             "
               >
-                {" "}
-                استراجياتنا{" "}
-                <AutoGraphIcon fontSize="large" className="text-color3" />{" "}
-              </h3>
+             استراجياتنا
+             <FaChartLine className='text-color3'/>
+             </h3>
               <p
                 className="
                 text-base  sm:items-start  sm:w-full  max-md:text-md max-md:mr-4
