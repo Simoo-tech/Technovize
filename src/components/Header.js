@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import logo from "../assets/main logo.webp";
 // icons
 import { RiMenuFill, RiMenu2Fill } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
@@ -52,18 +53,26 @@ const Header = () => {
               before:absolute hover:before:w-full before:h-[2px] sm:before:bg-white lg:before:bg-color3
               before:right-0 before:-bottom-2 before:w-0 "
             >
-              <a href={"/"} className="sm:text-base md:text-lg font-medium">
+              <Link
+                reloadDocument
+                to={"/"}
+                className="sm:text-base md:text-lg font-medium"
+              >
                 الرئيسية
-              </a>
+              </Link>
             </li>
             <li
               className="relative before:duration-150
               before:absolute hover:before:w-full before:h-[2px] sm:before:bg-white lg:before:bg-color3
               before:right-0 before:-bottom-2 before:w-0 "
             >
-              <a href="/من-نحن" className="sm:text-base md:text-lg font-medium">
+              <Link
+                reloadDocument
+                to="/about"
+                className="sm:text-base md:text-lg font-medium"
+              >
                 من نحن
-              </a>
+              </Link>
             </li>
             <li
               role="menuitem"
@@ -71,29 +80,36 @@ const Header = () => {
               before:absolute hover:before:w-full before:h-[2px] sm:before:bg-white lg:before:bg-color3
               before:right-0 before:-bottom-2 before:w-0 "
             >
-              <a
-                href="#services"
+              <Link
+                to="#services"
+                reloadDocument
                 className="sm:text-base md:text-lg  font-medium"
               >
                 خدماتنا
-              </a>
+              </Link>
             </li>
             <li
               className="relative before:duration-150
               before:absolute hover:before:w-full before:h-[2px] sm:before:bg-white lg:before:bg-color3
               before:right-0 before:-bottom-2 before:w-0 "
             >
-              <a href="sw" className="sm:text-base md:text-lg  font-medium">
+              <Link
+                reloadDocument
+                to="sw"
+                className="sm:text-base md:text-lg  font-medium"
+              >
                 سابقة الاعمال
-              </a>
+              </Link>
             </li>
-            <button
+            <Link
+              reloadDocument
+              to={""}
               className="text-lg py-2 px-6 shadow-xl rounded-xl
           sm:text-color3 sm:bg-primary
           lg:text-white lg:bg-color3"
             >
               اطلب خدمتك
-            </button>
+            </Link>
           </ul>
         </menu>
       </div>

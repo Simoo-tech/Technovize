@@ -166,8 +166,9 @@ const Services = () => {
                     {service.Cardinfo}
                   </p>
                 </div>
-                <a
-                  href={`/خدامتنا/${service.path}`}
+                <Link
+                  reloadDocument
+                  to={`/خدامتنا/${service.path}`}
                   className="hidden group-hover:flex flex-row items-center gap-2 border-t-2 duration-[.4s] w-full justify-center py-3"
                 >
                   اقرأ المزيد
@@ -175,7 +176,7 @@ const Services = () => {
                     size={15}
                     className="group-hover:animate-rightLeft"
                   />
-                </a>
+                </Link>
               </div>
             </div>
           ))}

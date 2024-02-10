@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 import { Cards } from "../components/Cards";
 import imgeStrategic from "../assets/est.jpg";
 import imgGoals from "../assets/goals.jpg";
-import imgAbout from "../assets/AboutUs.jpg";
+import imgAbout from "../assets/about.jpg";
 import ContactEmergencyIcon from "@mui/icons-material/ContactEmergency";
 import AutoGraphIcon from "@mui/icons-material/AutoGraph";
 import AdsClickSharpIcon from "@mui/icons-material/AdsClickSharp";
 function About() {
   return (
-    <>np
+    <>
       <div className=" about relative h-[60vh] bg-gray-400  bg-blend-overlay flex justify-between items-center"></div>
 
       {/* about company... */}
@@ -154,8 +154,8 @@ function About() {
                 <AutoGraphIcon fontSize="large" className="text-color3" />{" "}
               </h3>
               <p
-                className="text-lg
-                sm:text-base sm:mr-4 sm:items-start  
+                className="
+                text-base  sm:items-start  sm:w-full  max-md:text-md max-md:mr-4
                 lg:w-10/12
                 md:w-10/12
                 "
