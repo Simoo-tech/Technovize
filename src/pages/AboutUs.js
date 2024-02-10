@@ -3,7 +3,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { Cards } from "../components/Cards";
 
-function About() {
+export default function AboutUs() {
   return (
     <>
       <div className=" about relative h-[60vh] bg-gray-500  bg-blend-overlay flex justify-between items-center"></div>
@@ -154,5 +154,3 @@ function About() {
     </>
   );
 }
-
-export default About;

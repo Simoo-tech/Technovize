@@ -11,17 +11,20 @@ import { CustomerData, PortfolioData, ServicesData } from "../data";
 // icon
 import { IoIosArrowBack } from "react-icons/io";
 import { Cards } from "../components/Cards";
+import { Suspense } from "react";
 
-export const Home = () => {
+export default function Home() {
   return (
-    <main id="home-page" className="flex flex-col gap-28">
-      <Landing />
-      <Services />
-      <AboutUs />
-      <Portfolio />
-    </main>
+    <Suspense>
+      <main id="home-page" className="flex flex-col gap-28">
+        <Landing />
+        <Services />
+        <AboutUs />
+        <Portfolio />
+      </main>
+    </Suspense>
   );
-};
+}
 
 /////////// landing ///////////
 const Landing = () => {
@@ -51,7 +54,7 @@ const Landing = () => {
       <img
         src={landingImg}
         alt="landingImgs"
-        className="absolute z-20 lg:w-6/12 xl:w-5/12 bottom-0 left-10 float-left sm:hidden lg:block"
+        className="absolute z-20 lg:w-[500px] xl:w-[620px] 2xl:w-5/12  bottom-0 left-10 float-left sm:hidden lg:block"
       />
       {/* right side */}
       <div
@@ -60,11 +63,11 @@ const Landing = () => {
       >
         {/* text and buttoms */}
         <div className="top sm:gap-10 md:gap-14 lg:gap-8 flex flex-col justify-center h-[90%]">
-          <h1 className="sm:text-4xl md:text-4xl lg:text-5xl text-center w-full">
+          <h1 className="sm:text-4xl md:text-4xl lg:text-5xl 2xl:text-[5rem] text-center w-full">
             <strong className=" text-color3 ">تكنو فايز</strong> للبرمجيات
           </h1>
           <h2
-            className=" sm:text-lg md:text-xl lg:text-2xl sm:text-center lg:text-start leading-snug "
+            className=" sm:text-lg md:text-xl lg:text-2xl 2xl:text-[2rem] 3xl:text-[3rem] sm:text-center lg:text-start leading-snug 2xl:leading-snug  "
             style={{ color: "black" }}
           >
             تتميز شركة تكنو فايز بفريق عمل مؤهل ومتخصص من المطورين والمصممين
@@ -121,11 +124,11 @@ const Landing = () => {
 /////////// services ///////////
 const Services = () => {
   return (
-    <section id="services-section" className="relative w-full flex">
+    <section id="services-section" className="relative w-full flex ">
       <h1 className="sm:text-7xl md:text-8xl lg:text-9xl font-extrabold text-white opacity-60 absolute right-8 sm:-top-8 md:-top-11 lg:-top-16 z-0">
         خدماتنا
       </h1>
-      <div className="container relative z-10">
+      <div className="container relative z-10 flex flex-col gap-10">
         <dl id="services-title" className="w-fit">
           <dt className="sm:text-2xl md:text-3xl lg:text-4xl font-semibold sm:mb-1 lg:mb-2">
             اطلق فكرتك للعالم
@@ -134,19 +137,19 @@ const Services = () => {
             و اطلب خدمتك الان
           </dd>
         </dl>
-        <div className="services flex items-center sm:gap-10 lg:gap-20 justify-center flex-wrap mt-12">
+        <div className="services flex items-center sm:gap-10 lg:gap-20 justify-center flex-wrap">
           {ServicesData.map((service) => (
             <div
               key={service.id}
               style={{ backgroundImage: `url(${service.bgImg})` }}
-              className="min-h-[300px] flex duration-[.4s] relative group rounded-3xl rounded-ee-none hover:-translate-y-[15px] bg-cover
+              className="h-[320px] flex duration-[.4s] relative group rounded-3xl rounded-ee-none hover:-translate-y-[15px] bg-cover
                bg-center shadow-lg drop-shadow-md shadow-zinc-600
               sm:w-11/12 
               md:w-5/12 
               lg:w-4/12   
               xl:w-3/12          
               before:z-0 before:rounded-3xl before:rounded-ee-none before:absolute before:bg-black before:w-full 
-              before:h-full before:top-0 before:left-0 before:opacity-80"
+              before:h-full before:top-0 before:left-0 before:opacity-85"
             >
               {/* card text */}
               <div
@@ -155,8 +158,8 @@ const Services = () => {
               >
                 <img
                   src={service.img}
-                  alt="service-img"
-                  className="w-[130px] group-hover:hidden duration-[.4s]"
+                  alt={service.imgAlt}
+                  className="w-[150px] group-hover:hidden duration-[.4s]"
                 />
                 <div className="title-info flex flex-col gap-4">
                   <h4 className="text-xl font-semibold text-center w-full capitalize">
@@ -207,7 +210,7 @@ const AboutUs = () => {
             <h3 className="sm:text-base md:text-lg xl:text-xl font-medium">
               شركة تكنو فايز هي احدي اكبر شركات البرمجة في مصر و الوطن العربي,
               لدينا خدمات ستجعل فكرتك او مشروعك ينمو و ينتشر اسرع, لدينا خبرة
-              كافية في مجالات عديدة مثل خدمات:
+              كافية في مجالات عديدة مثل :
               <ul className="sm:text-base md:text-lg list-disc pr-5 flex flex-col gap-2 mt-3 font-normal">
                 <li>التسويق الاكتروني</li>
                 <li>تصميم و تطوير المواقع الأكترونية الخاصة</li>

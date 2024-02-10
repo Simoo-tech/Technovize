@@ -1,13 +1,17 @@
 import "./App.css";
 import Header from "./components/Header";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Home } from "./pages/Home";
 import { IoIosArrowUp } from "react-icons/io";
 import { useEffect, useState } from "react";
 import { Footer } from "./components/Footer";
-import AboutUs from "./pages/AboutUs";
-import { Service, Services } from "./pages/Services";
-import { AllPortfolio, Portfolio } from "./pages/Portfolio";
+import { lazy } from "react";
+
+const Home = lazy(() => import("./pages/Home"));
+const AboutUs = lazy(() => import("./pages/AboutUs"));
+const Services = lazy(() => import("./pages/Services"));
+const Service = lazy(() => import("./pages/Services"));
+const AllPortfolio = lazy(() => import("./pages/Portfolio"));
+const Portfolio = lazy(() => import("./pages/Portfolio"));
 
 function App() {
   useEffect(() => {

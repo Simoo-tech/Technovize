@@ -21,7 +21,7 @@ export const Footer = () => {
           <img
             src={logo}
             alt="logo"
-            className="sm:w-[180px] md:w-[200px] h-[100px]"
+            className="sm:w-[180px] md:w-[200px] h-[80px]"
           />
           {/* social media */}
           <div className="social-media flex items-center justify-center gap-7 w-full text-color3">
@@ -96,59 +96,6 @@ export const Footer = () => {
         >
           <FaRegCopyright size={16} />
           جميع الحقوق محفوظة لشركة ايجي ديف
-        </p>
-      </div>
-    </div>
-  );
-};
-
-export const Footer2 = () => {
-  return (
-    <div id="footer" className="flex flex-col pt-5 items-center container">
-      <div className="top w-full flex items-center justify-between border-b-2 pb-3 border-color4">
-        <ul className="flex items-center w-fit justify-center gap-10 text-lg font-semibold">
-          <Link to={"/"}>
-            <li>الرئيسية</li>
-          </Link>
-          <Link to={"/من-نحن"}>
-            <li>من نحن</li>
-          </Link>
-          <Link to={"/خدماتنا"}>
-            <li>خدماتنا</li>
-          </Link>
-          <Link to={"/تواصل-معنا"}>
-            <li>تواصل معنا</li>
-          </Link>
-        </ul>
-        <img src={logo} className="w-[140px]" alt="" />
-      </div>
-      <div className="copyright w-full flex justify-center items-center">
-        <div className="social flex gap-3 items-center ">
-          <Link>
-            <FaFacebook
-              size={22}
-              className="hover:text-white duration-200 text-blue-700"
-            />
-          </Link>
-          <Link>
-            <FaInstagram size={22} className="hover:text-white duration-200" />
-          </Link>
-          <Link>
-            <FaTiktok size={22} className="hover:text-white duration-200 " />
-          </Link>
-          <Link>
-            <FaLinkedin
-              size={22}
-              className="hover:text-white duration-200 text-blue-900"
-            />
-          </Link>
-        </div>
-        <p
-          className="w-full flex justify-center items-center 
-        py-3 flex-row-reverse gap-2 font-semibold text-color4 "
-        >
-          <FaRegCopyright size={16} />
-          جميع الحقوق محفوظة لشركة ايجي ديف 2019
         </p>
       </div>
     </div>

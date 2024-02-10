@@ -5,15 +5,15 @@ import { CgMenuMotion } from "react-icons/cg";
 import { IoIosArrowBack } from "react-icons/io";
 import { RiArrowUpSFill } from "react-icons/ri";
 
-export const Services = () => {
+function Services() {
   return (
     <div>
       <Outlet />
     </div>
   );
-};
+}
 
-export const Service = () => {
+function Service() {
   const { path } = useParams();
   const service = ServicesData.find((ser) => path === ser.path);
 
@@ -81,7 +81,7 @@ export const Service = () => {
           </div>
           <img
             src={service.bgImg}
-            alt="service-bg-img"
+            alt={service.imgAlt}
             className="w-[630px] max-w-[630px] h-[460px] max-h-[460px] rounded-xl shadow-2xl"
           />
         </div>
@@ -90,7 +90,7 @@ export const Service = () => {
       <div className="container flex justify-between items-center flex-row-reverse py-10">
         <img
           src={service.subimg}
-          alt=""
+          alt={service.imgAlt}
           className="w-[550px] h-[400px] rounded-xl shadow-lg"
         />
         <div className="text w-7/12 flex flex-col justify-center">
@@ -123,4 +123,6 @@ export const Service = () => {
       </div>
     </main>
   );
-};
+}
+
+export default (Services, Service);

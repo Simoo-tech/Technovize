@@ -9,14 +9,14 @@ const Header = () => {
   return (
     <nav
       id="Navbar"
-      className="flex justify-center sticky top-0 bg-primary z-30 shadow-md h-[73px]"
+      className="flex justify-center sticky top-0 bg-primary z-30 shadow-md sm:h-[73px] xl:h-fit 2xl:h-fit"
     >
       <div className="container py-3 flex items-center justify-between h-full relative ">
         {/* logo & menubar icon*/}
         <a href="/">
           <img
             src={logo}
-            className="sm:max-w-[100px] lg:max-w-[125px]"
+            className="sm:w-[100px] lg:w-[125px] xl:w-[175px] 2xl:w-[220px] 3xl:w-[250px]"
             alt="logo"
             id="logo"
           />
@@ -56,7 +56,7 @@ const Header = () => {
               <Link
                 reloadDocument
                 to={"/"}
-                className="sm:text-base md:text-lg font-medium"
+                className="sm:text-base md:text-lg xl:text-xl 2xl:text-2xl 3xl:text-3xl font-medium"
               >
                 الرئيسية
               </Link>
@@ -69,7 +69,7 @@ const Header = () => {
               <Link
                 reloadDocument
                 to="/about"
-                className="sm:text-base md:text-lg font-medium"
+                className="sm:text-base md:text-lg xl:text-xl 2xl:text-2xl 3xl:text-3xl font-medium"
               >
                 من نحن
               </Link>
@@ -83,12 +83,26 @@ const Header = () => {
               <Link
                 to="#services"
                 reloadDocument
-                className="sm:text-base md:text-lg  font-medium"
+                className="sm:text-base md:text-lg xl:text-xl 2xl:text-2xl 3xl:text-3xl font-medium"
               >
                 خدماتنا
               </Link>
             </li>
             <li
+              role="menuitem"
+              className="relative before:duration-150
+              before:absolute hover:before:w-full before:h-[2px] sm:before:bg-white lg:before:bg-color3
+              before:right-0 before:-bottom-2 before:w-0 "
+            >
+              <Link
+                to="#services"
+                reloadDocument
+                className="sm:text-base md:text-lg xl:text-xl 2xl:text-2xl 3xl:text-3xl font-medium"
+              >
+                تواصل معنا
+              </Link>
+            </li>
+            {/* <li
               className="relative before:duration-150
               before:absolute hover:before:w-full before:h-[2px] sm:before:bg-white lg:before:bg-color3
               before:right-0 before:-bottom-2 before:w-0 "
@@ -100,12 +114,12 @@ const Header = () => {
               >
                 سابقة الاعمال
               </Link>
-            </li>
+            </li> */}
             <Link
               reloadDocument
               to={""}
-              className="text-lg py-2 px-6 shadow-xl rounded-xl
-          sm:text-color3 sm:bg-primary
+              className="sm:text-base md:text-lg xl:text-xl 2xl:text-2xl  py-[0.4rem] px-5 shadow-xl rounded-xl border-2 border-color3 hover:bg-transparent hover:text-color3 duration-200
+          sm:text-color3 sm:bg-primary  
           lg:text-white lg:bg-color3"
             >
               اطلب خدمتك
