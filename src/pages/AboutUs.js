@@ -10,7 +10,7 @@ import AutoGraphIcon from "@mui/icons-material/AutoGraph";
 import AdsClickSharpIcon from "@mui/icons-material/AdsClickSharp";
 function About() {
   return (
-    <>
+    <>np
       <div className=" about relative h-[60vh] bg-gray-400  bg-blend-overlay flex justify-between items-center"></div>
 
       {/* about company... */}
