@@ -10,19 +10,18 @@ import "react-multi-carousel/lib/styles.css";
 import { CustomerData, PortfolioData, ServicesData } from "../data";
 // icon
 import { IoIosArrowBack } from "react-icons/io";
+import { spiral } from "ldrs";
 import { Cards } from "../components/Cards";
-import { Suspense } from "react";
 
+spiral.register();
 export default function Home() {
   return (
-    <Suspense>
-      <main id="home-page" className="flex flex-col gap-28">
-        <Landing />
-        <Services />
-        <AboutUs />
-        <Portfolio />
-      </main>
-    </Suspense>
+    <main id="home-page" className="flex flex-col gap-28">
+      <Landing />
+      <Services />
+      <AboutUs />
+      <Portfolio />
+    </main>
   );
 }
 
@@ -36,11 +35,15 @@ const Landing = () => {
       items: 6,
     },
     tablet: {
-      breakpoint: { max: 1550, min: 924 },
+      breakpoint: { max: 1550, min: 766 },
       items: 4,
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
+      breakpoint: { max: 766, min: 430 },
+      items: 3,
+    },
+    smmobile: {
+      breakpoint: { max: 430, min: 0 },
       items: 2,
     },
   };
@@ -54,7 +57,7 @@ const Landing = () => {
       <img
         src={landingImg}
         alt="landingImgs"
-        className="absolute z-20 lg:w-[500px] xl:w-[620px] 2xl:w-5/12  bottom-0 left-10 float-left sm:hidden lg:block"
+        className="absolute z-20 lg:w-[500px] xl:w-[620px] 2xl:w-6/12 bottom-0 left-10 float-left sm:hidden lg:block"
       />
       {/* right side */}
       <div
@@ -62,12 +65,12 @@ const Landing = () => {
         justify-center relative "
       >
         {/* text and buttoms */}
-        <div className="top sm:gap-10 md:gap-14 lg:gap-8 flex flex-col justify-center h-[90%]">
-          <h1 className="sm:text-4xl md:text-4xl lg:text-5xl 2xl:text-[5rem] text-center w-full">
+        <div className="top sm:gap-10 md:gap-14 lg:gap-8 xl:gap-10 2xl:gap-14 flex flex-col justify-center h-[90%]">
+          <h1 className="sm:text-4xl sm:text-center lg:text-start md:text-4xl lg:text-5xl 2xl:text-[5rem] w-full">
             <strong className=" text-color3 ">تكنو فايز</strong> للبرمجيات
           </h1>
           <h2
-            className=" sm:text-lg md:text-xl lg:text-2xl 2xl:text-[2rem] 3xl:text-[3rem] sm:text-center lg:text-start leading-snug 2xl:leading-snug  "
+            className=" sm:text-lg md:text-xl lg:text-2xl 2xl:text-[2.3rem] sm:text-center lg:text-start leading-snug 2xl:leading-snug  "
             style={{ color: "black" }}
           >
             تتميز شركة تكنو فايز بفريق عمل مؤهل ومتخصص من المطورين والمصممين
@@ -75,19 +78,26 @@ const Landing = () => {
             الاكتروني, تطوير الويب, تطوير تطبيقات الجوال, تصميم واجهات المستخدم,
             سيستم ERP
           </h2>
-          <div className="btn flex w-full sm:justify-evenly lg:justify-center lg:gap-8">
+          <div className="btn flex w-full sm:justify-center lg:justify-start lg:gap-8 2xl:gap-11">
             <button
-              className="sm:w-5/12 md:w-4/12 lg:w-4/12 xl:w-3/12 text-lg font-medium bg-color3 py-2 shadow-[10px_13px_26px_0px_#ccc7c6]
-            text-white rounded-lg hover:text-color3 hover:bg-white duration-300"
+              className="text-lg font-medium bg-color3 py-2 shadow-[10px_13px_26px_0px_#ccc7c6] text-white 
+              rounded-xl hover:text-color3 hover:bg-white duration-300 flex items-center justify-center gap-2
+              sm:w-5/12
+              md:w-4/12  
+              lg:w-4/12
+              xl:w-3/12 xl:text-xl
+              2xl:text-3xl 2xl:py-4 2xl:w-4/12
+            "
             >
-              من نحن
+              <span>من نحن </span>
+              <IoIosArrowBack className="" />
             </button>
-            <button
-              className="sm:w-5/12 md:w-4/12 lg:w-4/12 xl:w-3/12 text-lg font-medium bg-white py-2 shadow-[10px_13px_26px_0px_#ccc7c6]
+            {/* <button
+              className="sm:w-5/12 md:w-4/12 lg:w-4/12 xl:w-4/12 text-lg 2xl:text-2xl font-medium bg-white py-2 shadow-[10px_13px_26px_0px_#ccc7c6]
             text-color3 rounded-lg hover:bg-color3 hover:text-white duration-300"
             >
               سابقة الاعمال
-            </button>
+            </button> */}
           </div>
         </div>
         {/* logo slider */}
@@ -111,7 +121,7 @@ const Landing = () => {
                 title={customer.name}
                 alt="customer-logo"
                 datatype={customer.name}
-                className=" w-[90px] max-w-[90px]  "
+                className=" w-[90px] max-w-[90px] 2xl:w-[130px] 2xl:max-w-[130px] "
               />
             ))}
           </Carousel>
@@ -125,15 +135,19 @@ const Landing = () => {
 const Services = () => {
   return (
     <section id="services-section" className="relative w-full flex ">
-      <h1 className="sm:text-7xl md:text-8xl lg:text-9xl font-extrabold text-white opacity-60 absolute right-8 sm:-top-8 md:-top-11 lg:-top-16 z-0">
+      <h1
+        className="sm:text-7xl md:text-8xl lg:text-9xl 
+      font-extrabold text-white opacity-60 absolute right-8
+       sm:-top-8 md:-top-11 lg:-top-16 z-0"
+      >
         خدماتنا
       </h1>
       <div className="container relative z-10 flex flex-col gap-10">
         <dl id="services-title" className="w-fit">
-          <dt className="sm:text-2xl md:text-3xl lg:text-4xl font-semibold sm:mb-1 lg:mb-2">
+          <dt className="sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl font-semibold sm:mb-1 lg:mb-2">
             اطلق فكرتك للعالم
           </dt>
-          <dd className="sm:text-lg md:text-xl lg:text-2xl font-medium sm:text-end lg:mr-[8.6rem]">
+          <dd className="sm:text-lg md:text-xl lg:text-2xl 2xl:text-3xl font-medium sm:text-end lg:mr-[8.6rem]">
             و اطلب خدمتك الان
           </dd>
         </dl>
@@ -142,7 +156,7 @@ const Services = () => {
             <div
               key={service.id}
               style={{ backgroundImage: `url(${service.bgImg})` }}
-              className="h-[320px] flex duration-[.4s] relative group rounded-3xl rounded-ee-none hover:-translate-y-[15px] bg-cover
+              className="min-h-[320px] h-fit 2xl:h-[340px] flex duration-[.4s] relative group rounded-3xl rounded-ee-none hover:-translate-y-[15px] bg-cover
                bg-center shadow-lg drop-shadow-md shadow-zinc-600
               sm:w-11/12 
               md:w-5/12 
@@ -159,13 +173,13 @@ const Services = () => {
                 <img
                   src={service.img}
                   alt={service.imgAlt}
-                  className="w-[150px] group-hover:hidden duration-[.4s]"
+                  className="w-[150px] 2xl:w-[180px] group-hover:hidden duration-[.4s]"
                 />
                 <div className="title-info flex flex-col gap-4">
-                  <h4 className="text-xl font-semibold text-center w-full capitalize">
+                  <h4 className="text-xl 2xl:text-2xl font-semibold text-center w-full capitalize">
                     {service.name}
                   </h4>
-                  <p className="hidden group-hover:block w-full leading-relaxed text-[16px] duration-[.4s] truncate text-balance ">
+                  <p className="hidden group-hover:block w-full leading-relaxed text-[16px] 2xl:text-xl duration-[.4s] truncate text-balance ">
                     {service.Cardinfo}
                   </p>
                 </div>
@@ -192,40 +206,44 @@ const Services = () => {
 /////////// about us ///////////
 const AboutUs = () => {
   return (
-    <section id="about-us-section" className="relative w-full flex  flex-col">
-      <h1 className="sm:text-7xl md:text-8xl lg:text-9xl font-extrabold text-white opacity-60 absolute right-8 sm:-top-8 md:-top-11 lg:-top-16 z-0">
+    <section id="about-us-section" className="relative w-full flex flex-col">
+      <h1
+        className="sm:text-7xl md:text-8xl lg:text-9xl 
+      font-extrabold text-white opacity-60 absolute right-8
+       sm:-top-8 md:-top-11 lg:-top-16 z-0"
+      >
         من نحن
       </h1>
-      <div className="container flex flex-col justify-between h-full gap-5 relative z-10">
+      <div className="container flex flex-col justify-between h-full gap-7 relative z-10">
         <dl id="services-title" className="w-fit">
-          <dt className="sm:text-2xl md:text-3xl  lg:text-4xl font-semibold sm:mb-1 lg:mb-2 ">
+          <dt className="sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl font-semibold sm:mb-1 lg:mb-2">
             معًا سنحقق هدفك
           </dt>
-          <dd className="sm:text-lg md:text-xl lg:text-2xl font-medium sm:mr-[2rem] lg:mr-[4.6rem]">
+          <dd className="sm:text-base md:text-xl lg:text-2xl 2xl:text-3xl font-medium sm:text-end lg:mr-[4.6rem]">
             نحن معك خطوة بخطوة لتحويل فكرتك الي بيزنيس حقيقي
           </dd>
         </dl>
-        <div className="body-container flex items-center sm:gap-6 sm:flex-col-reverse lg:flex-row">
-          <hgroup className=" text px-4 sm:gap-4 xl:gap-7 sm:w-full lg:w-7/12 flex flex-col justify-evenly text-pretty ">
-            <h3 className="sm:text-base md:text-lg xl:text-xl font-medium">
+        <div className="body-container flex items-center sm:gap-6 sm:flex-col-reverse lg:flex-row ">
+          <hgroup className="text sm:gap-4 xl:gap-8 2xl:gap-11 sm:w-full lg:w-7/12 flex flex-col justify-between text-pretty self-start mt-2 ">
+            <h3 className="sm:text-base md:text-lg xl:text-[21px] 2xl:text-2xl font-medium">
               شركة تكنو فايز هي احدي اكبر شركات البرمجة في مصر و الوطن العربي,
               لدينا خدمات ستجعل فكرتك او مشروعك ينمو و ينتشر اسرع, لدينا خبرة
               كافية في مجالات عديدة مثل :
-              <ul className="sm:text-base md:text-lg list-disc pr-5 flex flex-col gap-2 mt-3 font-normal">
+              <ul className="sm:text-sm md:text-lg xl:text-xl 2xl:text-[23px] list-disc pr-5 flex flex-col gap-2 mt-4 ">
                 <li>التسويق الاكتروني</li>
                 <li>تصميم و تطوير المواقع الأكترونية الخاصة</li>
                 <li>برمجة تطبيقات الهاتف</li>
                 <li>تصميم هوية تجارية</li>
               </ul>
             </h3>
-            <h4 className="sm:text-base md:text-lg xl:text-xl font-medium text-pretty">
+            <h4 className="sm:text-base md:text-lg xl:text-[21px] 2xl:text-2xl font-medium text-pretty">
               نستخدم احدث التقنيات و الاستراتيجيات, هناك ايضا خبراء سيقدمون افضل
               الحلول للمشكلات التي ستواجك خلال بدء مشروعك و سيقدمون اقتراحات
               تجعل مشروعك افضل و اوضح.
             </h4>
             <Link
               to={"/من-نحن"}
-              className="flex w-fit py-2 sm:text-base md:text-lg px-6 items-center gap-2 bg-color4 text-white group
+              className="flex w-fit py-2 sm:text-base md:text-lg xl:text-xl 2xl:text-2xl px-6 items-center gap-2 bg-color4 text-white group
           duration-300 rounded-l-2xl hover:bg-color3 hover:rounded-md hover:-translate-x-2"
             >
               المزيد عنا
@@ -235,7 +253,7 @@ const AboutUs = () => {
           <img
             src={aboutImg2}
             alt="about-section-img"
-            className="sm:w-11/12 md:w-7/12 lg:w-5/12 shadow-2xl drop-shadow-xl rounded-md"
+            className="sm:w-10/12 md:w-8/12 lg:w-5/12 shadow-2xl drop-shadow-xl rounded-md"
           />
         </div>
       </div>

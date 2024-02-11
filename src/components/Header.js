@@ -16,7 +16,7 @@ const Header = () => {
         <a href="/">
           <img
             src={logo}
-            className="sm:w-[100px] lg:w-[125px] xl:w-[175px] 2xl:w-[220px] 3xl:w-[250px]"
+            className="sm:w-[100px] lg:w-[115px] xl:w-[145px] 2xl:w-[220px] "
             alt="logo"
             id="logo"
           />
@@ -56,7 +56,7 @@ const Header = () => {
               <Link
                 reloadDocument
                 to={"/"}
-                className="sm:text-base md:text-lg xl:text-xl 2xl:text-2xl 3xl:text-3xl font-medium"
+                className="sm:text-base md:text-lg  2xl:text-2xl 3xl:text-3xl font-medium"
               >
                 الرئيسية
               </Link>
@@ -69,7 +69,7 @@ const Header = () => {
               <Link
                 reloadDocument
                 to="/about"
-                className="sm:text-base md:text-lg xl:text-xl 2xl:text-2xl 3xl:text-3xl font-medium"
+                className="sm:text-base md:text-lg 2xl:text-2xl 3xl:text-3xl font-medium"
               >
                 من نحن
               </Link>
@@ -83,7 +83,7 @@ const Header = () => {
               <Link
                 to="#services"
                 reloadDocument
-                className="sm:text-base md:text-lg xl:text-xl 2xl:text-2xl 3xl:text-3xl font-medium"
+                className="sm:text-base md:text-lg 2xl:text-2xl 3xl:text-3xl font-medium"
               >
                 خدماتنا
               </Link>
@@ -97,7 +97,7 @@ const Header = () => {
               <Link
                 to="#services"
                 reloadDocument
-                className="sm:text-base md:text-lg xl:text-xl 2xl:text-2xl 3xl:text-3xl font-medium"
+                className="sm:text-base md:text-lg 2xl:text-2xl 3xl:text-3xl font-medium"
               >
                 تواصل معنا
               </Link>
@@ -118,7 +118,7 @@ const Header = () => {
             <Link
               reloadDocument
               to={""}
-              className="sm:text-base md:text-lg xl:text-xl 2xl:text-2xl  py-[0.4rem] px-5 shadow-xl rounded-xl border-2 border-color3 hover:bg-transparent hover:text-color3 duration-200
+              className="sm:text-base md:text-lg 2xl:text-2xl py-[0.4rem] px-5 shadow-xl rounded-xl border-2 border-color3 hover:bg-transparent hover:text-color3 duration-200
           sm:text-color3 sm:bg-primary  
           lg:text-white lg:bg-color3"
             >

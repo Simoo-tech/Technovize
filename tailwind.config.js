@@ -26,10 +26,10 @@ module.exports = {
     },
     screens: {
       sm: "250px",
-      md: "768px",
+      md: "767px",
       lg: "1024px",
-      xl: "1248px",
-      "2xl": "1550px",
+      xl: "1280px",
+      "2xl": "1900px",
       "3xl": "2100px",
     },
     container: {

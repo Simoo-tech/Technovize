@@ -2,9 +2,10 @@ import "./App.css";
 import Header from "./components/Header";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { IoIosArrowUp } from "react-icons/io";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { Footer } from "./components/Footer";
 import { lazy } from "react";
+import { Loading } from "./components/Loading";
 
 const Home = lazy(() => import("./pages/Home"));
 const AboutUs = lazy(() => import("./pages/AboutUs"));
@@ -20,22 +21,24 @@ function App() {
 
   return (
     <Router>
-      <div className="App relative">
-        <Header />
-        <Routes>
-          <Route path={"/"} element={<Home />} />
-          <Route path={"*"} element={<Home />} />
-          <Route path="about" element={<AboutUs />} />
-          <Route path="خدامتنا" element={<Services />}>
-            <Route path=":path" element={<Service />} />
-          </Route>
-          <Route path="اعمالنا" element={<AllPortfolio />}>
-            <Route path=":path" element={<Portfolio />} />
-          </Route>
-        </Routes>
-        <Footer />
-        <ToTop />
-      </div>
+      <Suspense fallback={<Loading />}>
+        <div className="App relative">
+          <Header />
+          <Routes>
+            <Route path={"/"} element={<Home />} />
+            <Route path={"*"} element={<Home />} />
+            <Route path="about" element={<AboutUs />} />
+            <Route path="خدامتنا" element={<Services />}>
+              <Route path=":path" element={<Service />} />
+            </Route>
+            <Route path="اعمالنا" element={<AllPortfolio />}>
+              <Route path=":path" element={<Portfolio />} />
+            </Route>
+          </Routes>
+          <Footer />
+          <ToTop />
+        </div>
+      </Suspense>
     </Router>
   );
 }

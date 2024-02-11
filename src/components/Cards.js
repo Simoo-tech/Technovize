@@ -3,7 +3,7 @@ import { BiShieldAlt2, BiSupport } from "react-icons/bi";
 import { FaCoins, FaRegLightbulb } from "react-icons/fa";
 import { GiRibbonMedal } from "react-icons/gi";
 
-export const Cards = () => {
+export function Cards() {
   return (
     <section id="why-us" className="h-fit my-10 w-full relative">
       <span
@@ -24,7 +24,8 @@ export const Cards = () => {
             sm:w-9/12 sm:h-fit sm:text-xl sm:py-3 sm:gap-2
             md:py-3 md:px-4 
             lg:w-[190px] lg:h-[120px] 
-            xl:w-[220px] xl:h-[140px] "
+            xl:w-[220px] xl:h-[140px] 
+            2xl:w-[250px] 2xl:h-[160px]"
         >
           <FaRegLightbulb
             color="white"
@@ -39,7 +40,8 @@ export const Cards = () => {
             sm:w-9/12 sm:h-fit sm:text-xl sm:py-3 sm:gap-2
             md:py-3 md:px-4 
             lg:w-[190px] lg:h-[120px] 
-            xl:w-[220px] xl:h-[140px]  "
+            xl:w-[220px] xl:h-[140px] 
+            2xl:w-[250px] 2xl:h-[160px] "
         >
           <BiShieldAlt2
             color="white"
@@ -54,7 +56,8 @@ export const Cards = () => {
             sm:w-9/12 sm:h-fit sm:text-xl sm:py-3 sm:gap-2
             md:py-3 md:px-4 
             lg:w-[190px] lg:h-[120px] 
-            xl:w-[220px] xl:h-[140px] "
+            xl:w-[220px] xl:h-[140px]
+            2xl:w-[250px] 2xl:h-[160px] "
         >
           <BiSupport
             color="white"
@@ -69,7 +72,8 @@ export const Cards = () => {
             sm:w-9/12 sm:h-fit sm:text-xl sm:py-3 sm:gap-2
             md:py-3 md:px-4 
             lg:w-[190px] lg:h-[120px] 
-            xl:w-[220px] xl:h-[140px] "
+            xl:w-[220px] xl:h-[140px]
+            2xl:w-[250px] 2xl:h-[160px] "
         >
           <FaCoins
             color="white"
@@ -84,7 +88,8 @@ export const Cards = () => {
             sm:w-9/12 sm:h-fit sm:text-xl sm:py-3 sm:gap-2
             md:py-3 md:px-4 
             lg:w-[190px] lg:h-[120px] 
-            xl:w-[220px] xl:h-[140px] "
+            xl:w-[220px] xl:h-[140px]
+            2xl:w-[250px] 2xl:h-[160px] "
         >
           <GiRibbonMedal
             color="white"
@@ -97,4 +102,4 @@ export const Cards = () => {
       </div>
     </section>
   );
-};
+}
