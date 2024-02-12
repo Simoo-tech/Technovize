@@ -95,11 +95,25 @@ function Service() {
     >
       {/* top service img  */}
       <div
-        className="img-content sm:min-h-fit lg:min-h-[90vh] h-fit w-full bg-cover bg-no-repeat relative before:z-0 flex justify-start sm:gap-8 md:gap-10 items-center flex-col py-6
-        before:absolute before:top-0 before:left-0 before:bg-black before:opacity-85 before:w-full before:h-full bg-center"
-        style={{ backgroundImage: `url(${service.bgImg})` }}
+        className="img-content h-fit w-full relative flex justify-start items-center flex-col py-6
+        before:absolute before:top-0 before:left-0 before:bg-black before:opacity-85 before:w-full before:h-full before:z-10 
+        sm:min-h-fit sm:gap-8
+        md:gap-10 
+        lg:min-h-[90vh]"
       >
-        <span className="sm:text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl text-white font-bold opacity-40 flex items-center gap-1 self-start text-right mr-2 ">
+        <img
+          src={service.bgImg}
+          alt={service.imgAlt}
+          loading="eager"
+          className="absolute object-cover w-full h-full top-0 left-0 "
+        />
+        <span
+          className="text-white font-bold opacity-40 flex items-center gap-1 self-start text-right mr-2 z-10
+        sm:text-3xl 
+        md:text-4xl 
+        xl:text-5xl 
+        2xl:text-6xl "
+        >
           <CgMenuMotion className="text-color3 " />
           <span>{service.name}</span>
         </span>
@@ -125,10 +139,11 @@ function Service() {
           <img
             src={service.bgImg}
             alt={service.imgAlt}
+            loading="eager"
             className="sm:hidden lg:block 
-            lg:w-[450px] lg:h-[300px] lg:max-h-[300px]
-            xl:w-[620px] xl:h-[440px] xl:max-h-[460px]
-             2xl:w-[710px] 2xl:h-[550px] 2xl:max-h-[550px] rounded-xl shadow-2xl"
+            lg:w-[430px] lg:h-[300px] 
+            xl:w-[620px] xl:h-[440px] 
+            2xl:w-[710px] 2xl:h-[550px] rounded-xl shadow-2xl"
           />
         </div>
       </div>
@@ -158,11 +173,11 @@ function Service() {
           <img
             src={service.subimg}
             alt={service.imgAlt}
-            className="
-            lg:w-[550px] lg:h-[400px] 
-            sm:w-11/12 sm:h-auto 
-    
-            2xl:w-[630px] 2xl:h-[480px] rounded-xl shadow-lg"
+            loading="eager"
+            className="rounded-xl shadow-lg
+            lg:w-[550px] lg:h-[400px] lg:max-h-[480px]
+            sm:w-11/12 sm:h-auto     
+            2xl:w-[630px] 2xl:h-[480px] 2xl:max-h-[480px]"
           />
         </div>
       </div>

@@ -27,7 +27,7 @@ function App() {
           <Routes>
             <Route path={"/"} element={<Home />} />
             <Route path={"*"} element={<Home />} />
-            <Route path="about" element={<AboutUs />} />
+            <Route path="من-نحن" element={<AboutUs />} />
             <Route path="خدامتنا" element={<Services />}>
               <Route path=":path" element={<Service />} />
             </Route>

@@ -5,9 +5,9 @@ import { GiRibbonMedal } from "react-icons/gi";
 
 export function Cards() {
   return (
-    <section id="why-us" className="h-fit my-10 w-full relative">
+    <section id="why-us" className="h-fit w-full relative">
       <span
-        className="z-0 absolute top-[50%] bg-color3  translate-y-[-50%]
+        className="z-0 absolute top-[50%] bg-color3 translate-y-[-50%]
         sm:w-2 sm:h-5/6 sm:left-[50%] translate-x-[-50%]
         lg:w-11/12 lg:left-10 lg:h-2 lg:translate-x-0
         xl:left-16"
@@ -21,7 +21,7 @@ export function Cards() {
       >
         <div
           className="box flex flex-col bg-color4 rounded-lg shadow-xl drop-shadow-xl justify-evenly items-center
-            sm:w-9/12 sm:h-fit sm:text-xl sm:py-3 sm:gap-2
+            sm:w-11/12 sm:h-fit sm:text-xl sm:py-3 sm:gap-2
             md:py-3 md:px-4 
             lg:w-[190px] lg:h-[120px] 
             xl:w-[220px] xl:h-[140px] 
@@ -37,7 +37,7 @@ export function Cards() {
         </div>
         <div
           className="box flex flex-col bg-color4 rounded-lg shadow-xl drop-shadow-xl justify-evenly items-center
-            sm:w-9/12 sm:h-fit sm:text-xl sm:py-3 sm:gap-2
+            sm:w-11/12 sm:h-fit sm:text-xl sm:py-3 sm:gap-2
             md:py-3 md:px-4 
             lg:w-[190px] lg:h-[120px] 
             xl:w-[220px] xl:h-[140px] 
@@ -53,7 +53,7 @@ export function Cards() {
         </div>
         <div
           className="box flex flex-col bg-color4 rounded-lg shadow-xl drop-shadow-xl justify-evenly items-center
-            sm:w-9/12 sm:h-fit sm:text-xl sm:py-3 sm:gap-2
+            sm:w-11/12 sm:h-fit sm:text-xl sm:py-3 sm:gap-2
             md:py-3 md:px-4 
             lg:w-[190px] lg:h-[120px] 
             xl:w-[220px] xl:h-[140px]
@@ -69,7 +69,7 @@ export function Cards() {
         </div>
         <div
           className="box flex flex-col bg-color4 rounded-lg shadow-xl drop-shadow-xl justify-evenly items-center
-            sm:w-9/12 sm:h-fit sm:text-xl sm:py-3 sm:gap-2
+            sm:w-11/12 sm:h-fit sm:text-xl sm:py-3 sm:gap-2
             md:py-3 md:px-4 
             lg:w-[190px] lg:h-[120px] 
             xl:w-[220px] xl:h-[140px]
@@ -85,7 +85,7 @@ export function Cards() {
         </div>
         <div
           className="box flex flex-col bg-color4 rounded-lg shadow-xl drop-shadow-xl justify-evenly items-center
-            sm:w-9/12 sm:h-fit sm:text-xl sm:py-3 sm:gap-2
+            sm:w-11/12 sm:h-fit sm:text-xl sm:py-3 sm:gap-2
             md:py-3 md:px-4 
             lg:w-[190px] lg:h-[120px] 
             xl:w-[220px] xl:h-[140px]

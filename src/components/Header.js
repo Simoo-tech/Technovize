@@ -13,14 +13,14 @@ const Header = () => {
     >
       <div className="container py-3 flex items-center justify-between h-full relative ">
         {/* logo & menubar icon*/}
-        <a href="/">
+        <Link reloadDocument href="/">
           <img
             src={logo}
             className="sm:w-[100px] lg:w-[115px] xl:w-[145px] 2xl:w-[220px] "
             alt="logo"
             id="logo"
           />
-        </a>
+        </Link>
         <button
           id="menu-bars"
           className="sm:block lg:hidden w-fit"
@@ -68,7 +68,7 @@ const Header = () => {
             >
               <Link
                 reloadDocument
-                to="/about"
+                to="/من-نحن"
                 className="sm:text-base md:text-lg 2xl:text-2xl 3xl:text-3xl font-medium"
               >
                 من نحن
