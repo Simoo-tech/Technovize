@@ -16,7 +16,7 @@ const Header = () => {
         <Link reloadDocument href="/">
           <img
             src={logo}
-            className="sm:w-[100px] lg:w-[115px] xl:w-[145px] 2xl:w-[220px] "
+            className="sm:w-[100px] lg:w-[115px] xl:w-[140px] 2xl:w-[210px] "
             alt="logo"
             id="logo"
           />
