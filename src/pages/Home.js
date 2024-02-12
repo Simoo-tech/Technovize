@@ -324,8 +324,12 @@ const Portfolio = () => {
               before:absolute before:bottom-0 before:w-full before:h-[70%] before:bg-gradient-to-t before:rounded-2xl before:duration-300
               before:from-black before:via-black before:to-transparent before:opacity-70 hover:before:opacity-85`}
             >
-              <img src={por.logo} alt="" className="w-[20px] flex self-start" />
-              <img src={por.img} alt="" className="w-[310px] " />
+              <img
+                src={por.logo}
+                alt="لوجو-الشركة"
+                className="w-[20px] flex self-start"
+              />
+              <img src={por.img} alt="صورة-للعمل" className="w-[310px] " />
               <div className="text relative flex flex-col items-start justify-end w-full">
                 <p className="text-lg opacity-85">{por.type}</p>
                 <p className="text-2xl font-semibold">{por.cusname}</p>
