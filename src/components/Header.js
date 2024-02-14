@@ -15,6 +15,7 @@ const Header = () => {
         {/* logo & menubar icon*/}
         <Link reloadDocument href="/" aria-label="Home-page">
           <img
+            loading="eager"
             src={logo}
             className="sm:w-[100px] lg:w-[115px] xl:w-[140px] 2xl:w-[210px] "
             alt="logo"

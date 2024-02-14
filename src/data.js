@@ -142,8 +142,8 @@ export const ServicesData = [
   },
   {
     id: "3",
-    path: "تصميم-الهوية-التجارية",
-    name: "branding",
+    path: "branding",
+    name: "تصميم هوية تجارية ",
     img: ser3,
     subimg: subimg3,
     bgImg: bgServ3,

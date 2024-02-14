@@ -56,7 +56,7 @@ const Landing = () => {
       />
       <img
         src={landingImg}
-        loading="lazy"
+        loading="eager"
         alt="landingImgs"
         className="absolute z-20 lg:w-[500px] xl:w-[620px] 2xl:w-6/12 bottom-0 left-10 float-left sm:hidden lg:block"
       />
@@ -117,6 +117,7 @@ const Landing = () => {
           >
             {CustomerData.map((customer) => (
               <img
+                loading="eager"
                 key={customer.id}
                 src={customer.img}
                 title={customer.name}
@@ -168,7 +169,7 @@ const Services = () => {
               <img
                 src={service.bgImg}
                 alt={service.imgAlt}
-                loading="lazy"
+                loading="eager"
                 className="absolute object-cover w-full h-full top-0 left-0 rounded-3xl rounded-ee-none"
               />
               {/* card text */}
@@ -177,7 +178,7 @@ const Services = () => {
                   group-hover:justify-between group-hover:gap-4 duration-[.4s] p-4 pb-0"
               >
                 <img
-                  loading="lazy"
+                  loading="eager"
                   src={service.img}
                   alt={service.imgAlt}
                   className="w-[150px] 2xl:w-[180px] group-hover:hidden duration-[.4s]"
