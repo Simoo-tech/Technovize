@@ -21,30 +21,31 @@ export const Footer = () => {
           <img
             src={logo}
             alt="logo"
-            loading="lazy"
+            loading="eager"
             className="sm:w-[180px] md:w-[200px] h-[80px]"
           />
           {/* social media */}
           <div className="social-media flex items-center justify-center gap-7 w-full text-color3">
-            <Link>
+            <Link aria-label="facebook">
               <FaFacebook size={30} className="hover:text-white duration-200" />
             </Link>
-            <Link>
+            <Link aria-label="instagram">
               <FaInstagram
                 size={30}
                 className="hover:text-white duration-200"
               />
             </Link>
-            <Link>
+            <Link aria-label="titok">
               <FaTiktok size={30} className="hover:text-white duration-200" />
             </Link>
-            <Link>
+            <Link aria-label="linkedin">
               <FaLinkedin size={30} className="hover:text-white duration-200" />
             </Link>
           </div>
           {/* contact */}
           <div className="contact flex gap-5 text-white h-full w-full sm:flex-col md:flex-row items-center justify-center ">
             <a
+              aria-label="our-phone-number"
               href="tel:+201023221992"
               className="flex items-center gap-2 sm:text-lg md:text-lg"
             >
@@ -52,6 +53,7 @@ export const Footer = () => {
               <FaPhoneAlt className="p-1 rounded-lg text-color3" size={30} />
             </a>
             <a
+              aria-label="our-email"
               href="tel:+201116648153"
               className="flex items-center gap-2 sm:text-lg md:text-lg"
             >
