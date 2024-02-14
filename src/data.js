@@ -35,7 +35,7 @@ export const ServicesData = [
   {
     id: "1",
     name: "تصميم المواقع الإلكترونية ",
-    path: "تصميم-المواقع",
+    path: "website-design",
     img: ser1,
     subimg: subimg1,
     bgImg: bgServ1,
@@ -89,7 +89,7 @@ export const ServicesData = [
   {
     id: "2",
     name: "برمجة تطبيقات الهاتف",
-    path: "برمجة-التطبيقات",
+    path: "application-developing",
     img: ser2,
     subimg: subimg2,
     bgImg: bgServ2,
@@ -143,7 +143,7 @@ export const ServicesData = [
   {
     id: "3",
     path: "تصميم-الهوية-التجارية",
-    name: "تصميم هوية تجارية",
+    name: "branding",
     img: ser3,
     subimg: subimg3,
     bgImg: bgServ3,
@@ -198,7 +198,7 @@ export const ServicesData = [
   {
     id: "4",
     name: "التسويق الالكتروني ",
-    path: "تسويق-الالكتروني",
+    path: "digital-marketing",
     img: ser4,
     subimg: subimg4,
     bgImg: bgServ4,
@@ -250,7 +250,7 @@ export const ServicesData = [
   {
     id: "5",
     name: "انظمة الشركات",
-    path: "انظمة-الشركات",
+    path: "corporate-systems",
     img: ser5,
     imgAlt: "انظمة الشركات - Corporate systems",
     Cardinfo:

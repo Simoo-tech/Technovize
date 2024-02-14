@@ -13,7 +13,7 @@ const Header = () => {
     >
       <div className="container py-3 flex items-center justify-between h-full relative ">
         {/* logo & menubar icon*/}
-        <Link reloadDocument href="/">
+        <Link reloadDocument href="/" aria-label="Home-page">
           <img
             src={logo}
             className="sm:w-[100px] lg:w-[115px] xl:w-[140px] 2xl:w-[210px] "
@@ -48,12 +48,12 @@ const Header = () => {
           >
             {/* menu items */}
             <li
-              role="menuitem"
               className="relative before:duration-150
               before:absolute hover:before:w-full before:h-[2px] sm:before:bg-white lg:before:bg-color3
               before:right-0 before:-bottom-2 before:w-0 "
             >
               <Link
+                aria-label="Home-page"
                 reloadDocument
                 to={"/"}
                 className="sm:text-base md:text-lg  2xl:text-2xl 3xl:text-3xl font-medium"
@@ -67,20 +67,21 @@ const Header = () => {
               before:right-0 before:-bottom-2 before:w-0 "
             >
               <Link
+                aria-label="about-page"
                 reloadDocument
-                to="/من-نحن"
+                to="/about-us"
                 className="sm:text-base md:text-lg 2xl:text-2xl 3xl:text-3xl font-medium"
               >
                 من نحن
               </Link>
             </li>
             <li
-              role="menuitem"
               className="relative before:duration-150
               before:absolute hover:before:w-full before:h-[2px] sm:before:bg-white lg:before:bg-color3
               before:right-0 before:-bottom-2 before:w-0 "
             >
               <Link
+                aria-label="services-page"
                 to="#services"
                 reloadDocument
                 className="sm:text-base md:text-lg 2xl:text-2xl 3xl:text-3xl font-medium"
@@ -89,12 +90,12 @@ const Header = () => {
               </Link>
             </li>
             <li
-              role="menuitem"
               className="relative before:duration-150
               before:absolute hover:before:w-full before:h-[2px] sm:before:bg-white lg:before:bg-color3
               before:right-0 before:-bottom-2 before:w-0 "
             >
               <Link
+                aria-label="call us"
                 to="#services"
                 reloadDocument
                 className="sm:text-base md:text-lg 2xl:text-2xl 3xl:text-3xl font-medium"

@@ -11,7 +11,7 @@ const Home = lazy(() => import("./pages/Home"));
 const AboutUs = lazy(() => import("./pages/AboutUs"));
 const Services = lazy(() => import("./pages/Services"));
 const Service = lazy(() => import("./pages/Services"));
-const AllPortfolio = lazy(() => import("./pages/Portfolio"));
+// const AllPortfolio = lazy(() => import("./pages/Portfolio"));
 const Portfolio = lazy(() => import("./pages/Portfolio"));
 
 function App() {
@@ -27,13 +27,11 @@ function App() {
           <Routes>
             <Route path={"/"} element={<Home />} />
             <Route path={"*"} element={<Home />} />
-            <Route path="من-نحن" element={<AboutUs />} />
-            <Route path="خدامتنا" element={<Services />}>
+            <Route path="about-us" element={<AboutUs />} />
+            <Route path="services" element={<Services />}>
               <Route path=":path" element={<Service />} />
             </Route>
-            <Route path="اعمالنا" element={<AllPortfolio />}>
-              <Route path=":path" element={<Portfolio />} />
-            </Route>
+            <Route path="portfolio/:path" element={<Portfolio />} />
           </Routes>
           <Footer />
           <ToTop />

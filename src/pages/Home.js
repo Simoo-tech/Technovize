@@ -56,6 +56,7 @@ const Landing = () => {
       />
       <img
         src={landingImg}
+        loading="lazy"
         alt="landingImgs"
         className="absolute z-20 lg:w-[500px] xl:w-[620px] 2xl:w-6/12 bottom-0 left-10 float-left sm:hidden lg:block"
       />
@@ -80,7 +81,7 @@ const Landing = () => {
           </h2>
           <div className="btn flex w-full sm:justify-center lg:justify-start lg:gap-8 2xl:gap-11">
             <Link
-              to={"/من-نحن"}
+              to={"/about-us"}
               reloadDocument
               className="text-lg font-medium bg-color3 py-[10px] shadow-[10px_13px_26px_0px_#ccc7c6] text-white 
               rounded-xl hover:text-color3 hover:bg-white duration-300 flex items-center justify-center gap-2
@@ -109,8 +110,6 @@ const Landing = () => {
         >
           <Carousel
             infinite={true}
-            autoPlay
-            autoPlaySpeed={3000}
             responsive={responsive}
             arrows={false}
             rtl={true}
@@ -169,7 +168,7 @@ const Services = () => {
               <img
                 src={service.bgImg}
                 alt={service.imgAlt}
-                loading="eager"
+                loading="lazy"
                 className="absolute object-cover w-full h-full top-0 left-0 rounded-3xl rounded-ee-none"
               />
               {/* card text */}
@@ -178,6 +177,7 @@ const Services = () => {
                   group-hover:justify-between group-hover:gap-4 duration-[.4s] p-4 pb-0"
               >
                 <img
+                  loading="lazy"
                   src={service.img}
                   alt={service.imgAlt}
                   className="w-[150px] 2xl:w-[180px] group-hover:hidden duration-[.4s]"
@@ -192,7 +192,7 @@ const Services = () => {
                 </div>
                 <Link
                   reloadDocument
-                  to={`/خدامتنا/${service.path}`}
+                  to={`/services/${service.path}`}
                   className="hidden group-hover:flex flex-row items-center gap-2 border-t-2 duration-[.4s] w-full justify-center py-3"
                 >
                   اقرأ المزيد
@@ -249,7 +249,7 @@ const AboutUs = () => {
               تجعل مشروعك افضل و اوضح.
             </h4>
             <Link
-              to={"/من-نحن"}
+              to={"/about-us"}
               reloadDocument
               className="flex w-fit py-[9px] sm:text-[15px] md:text-lg lg:text-lg xl:text-lg 2xl:text-2xl px-6 items-center gap-2 bg-color4 text-white group
           duration-300 rounded-l-2xl hover:bg-color3 hover:rounded-md hover:-translate-x-2"
@@ -260,7 +260,7 @@ const AboutUs = () => {
           </hgroup>
           <img
             src={aboutImg2}
-            loading="eager"
+            loading="lazy"
             alt="about-section-img"
             className="rounded-md
             sm:w-full
@@ -301,15 +301,13 @@ const Portfolio = () => {
         اعمالنا
       </h1>
       <div className="container flex flex-col justify-between h-full gap-5 relative z-10">
-        <dl id="services-title" className="w-fit">
-          <dt className="sm:text-2xl md:text-3xl lg:text-4xl font-semibold ">
+        <div id="services-title" className="w-fit">
+          <h1 className="sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl font-semibold sm:mb-1 lg:mb-2">
             بعض اعمالنا
-          </dt>
-        </dl>
+          </h1>
+        </div>
         <Carousel
           infinite={true}
-          autoPlay
-          autoPlaySpeed={2000}
           responsive={responsive}
           arrows={false}
           rtl={true}
@@ -325,11 +323,17 @@ const Portfolio = () => {
               before:from-black before:via-black before:to-transparent before:opacity-70 hover:before:opacity-85`}
             >
               <img
+                loading="lazy"
                 src={por.logo}
                 alt="لوجو-الشركة"
                 className="w-[20px] flex self-start"
               />
-              <img src={por.img} alt="صورة-للعمل" className="w-[310px] " />
+              <img
+                src={por.img}
+                alt="صورة-للعمل"
+                className="w-[310px] "
+                loading="lazy"
+              />
               <div className="text relative flex flex-col items-start justify-end w-full">
                 <p className="text-lg opacity-85">{por.type}</p>
                 <p className="text-2xl font-semibold">{por.cusname}</p>

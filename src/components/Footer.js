@@ -21,6 +21,7 @@ export const Footer = () => {
           <img
             src={logo}
             alt="logo"
+            loading="lazy"
             className="sm:w-[180px] md:w-[200px] h-[80px]"
           />
           {/* social media */}
